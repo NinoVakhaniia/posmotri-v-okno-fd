@@ -194,6 +194,7 @@ ol {
 .content__card-link {
   color: #fff;
   text-decoration: none;
+  display: block;
 }
 
 .content__video-card-description {
@@ -289,10 +290,6 @@ ol {
 
 .content__card-link:hover {
   text-decoration: underline;
-}
-
-.content__card-link {
-  display: block;
 }
 
 .content__card-link:active {
