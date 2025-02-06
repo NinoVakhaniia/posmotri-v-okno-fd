@@ -232,7 +232,7 @@ ol {
 }
 
 .button:hover {
-  background-color: #545050;
+  text-decoration: underline;
 }
 
 .button:active {
