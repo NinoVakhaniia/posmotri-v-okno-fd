@@ -16,6 +16,10 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
 }
 
 h1,
@@ -52,23 +56,16 @@ ol {
 
 /*Блок 1*/
 
-.page {
-  display: flex;
-  padding-bottom: 40px;
-}
-
 .content {
   display: grid;
   grid-template-columns: 711px 399px;
-  grid-template-rows: 534px;
+  grid-template-rows: 100%;
   justify-content: space-between;
   grid-template-areas: "result" "content__details";
   gap: 10px;
   align-items: end;
   width: 1140px;
-  margin: 113px 30px;
-  max-width: 1140px;
-  height: 534px;
+  margin: 10px 0;
 }
 
 .search-form {
@@ -84,16 +81,12 @@ ol {
 
 .content__list-container {
   height: 298px;
-  overflow-x: hidden;
   overflow-y: scroll;
+  position: relative;
 }
 
 .content__details {
   width: 100%;
-}
-
-.title {
-  margin-bottom: 26px;
 }
 
 /*Блок 2*/
@@ -101,7 +94,7 @@ ol {
 .result__video {
   width: 100%;
   height: 386px;
-  margin-bottom: 16px;
+  margin-block-end: 16px;
   object-fit: contain;
 }
 
@@ -118,12 +111,13 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: initial;
+  width: 196px;
 }
 
 .content__list {
   flex-direction: column;
   display: flex;
-  gap: 30px;
+  gap: 25px;
 }
 
 /*Блок 3*/
@@ -151,9 +145,10 @@ ol {
 }
 
 .search-form__textfield {
-  font-size: 16px;
+  font-size: 18px;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
-  line-height: 21.6px;
+  line-height: normal;
   background-color: transparent;
   text-decoration: none;
   border: none;
@@ -174,10 +169,11 @@ ol {
 
 .title {
   font-size: 75px;
-  font-family: Oswald, serif;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   line-height: 70.5px;
   text-transform: uppercase;
+  margin-bottom: 26px;
 }
 
 .content__accent {
@@ -208,12 +204,8 @@ ol {
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
-  font-family: Fira Sans, sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   margin-top: 6px;
-}
-
-.content__video-card-description-container {
-  width: 196px;
 }
 
 .button {
@@ -285,54 +277,45 @@ ol {
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
 }
 
 .search-form__label:hover .search-form__label-text {
   border-bottom: 1px solid #fff; /*underline не подходит*/
 }
 
-.search-form__label:hover {
-  cursor: pointer;
-}
-
 .content__list-item {
   padding: 0 3px;
-}
-
-.content__video-card:active {
-  background-color: #545050;
-}
-
-.content__card-link_current:hover {
-  text-decoration: underline;
-}
-
-.content__card-link_current:active {
-  background-color: #545050;
 }
 
 .content__card-link:hover {
   text-decoration: underline;
 }
 
-.content__video-card:active {
+.content__card-link {
+  display: block;
+}
+
+.content__card-link:active {
   background-color: #545050;
 }
 
-.content__video-card:focus {
+.content__card-link:focus {
   outline: none;
 }
 
-.content__video-card:focus-visible {
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
   outline: 1px solid #fff;
+  display: block;
 }
 
 .result__video-container {
   position: relative;
 }
 
-.content__list-container {
-  position: relative;
+.content__card-link_current {
+  background-color: #545050;
 }
