@@ -104,20 +104,20 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  width: 194px;
-  object-fit: contain;
-  object-position: center;
+  height: 103px;
+  width: 193px;
+  object-position: right;
 }
 
 .content__video-card-description-container {
   flex-grow: initial;
-  width: 196px;
+  width: 190px;
 }
 
 .content__list {
   flex-direction: column;
   display: flex;
-  gap: 25px;
+  gap: 30px;
 }
 
 /*Блок 3*/
